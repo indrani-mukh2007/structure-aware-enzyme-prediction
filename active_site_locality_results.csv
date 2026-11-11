@@ -1,0 +1,4 @@
+Subset,n_Proteins,Fmax_ESM2_Alone,Fmax_ESM2_Structure,Fmax_Gain_Delta,Fmax_Gain_Reported,Delta_95_CI_Low,Delta_95_CI_High,One_Sided_p_value
+Non-local active sites,273,0.6351,0.7176,0.0824,0.08,0.042,0.1157,0.0
+Local active sites,967,0.7127,0.7241,0.0114,0.01,-0.0078,0.0305,0.1233
+All test enzymes,1240,0.6954,0.7226,0.0272,0.03,0.0095,0.0458,0.0

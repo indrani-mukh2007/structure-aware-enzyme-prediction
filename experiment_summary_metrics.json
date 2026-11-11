@@ -1,0 +1,170 @@
+{
+  "pytorch_verification": {
+    "mini_train_bce_seq": 0.2847,
+    "mini_train_bce_gnn": 0.2808,
+    "mini_eval_fmax_gnn_native": 0.1565,
+    "mini_eval_fmax_seq_alone": 0.1538,
+    "mini_eval_fmax_shuffled_ctrl": 0.1565,
+    "mini_eval_fmax_window_ctrl": 0.1565,
+    "verified_native_edges": 1212,
+    "verified_shuffled_edges": 1212,
+    "verified_window_edges": 1212
+  },
+  "global_benchmark": [
+    {
+      "Model": "ESM-2 + structure (GNN)",
+      "Fmax_Reported": 0.72,
+      "Fmax_Mean_3Seeds": 0.7151,
+      "Fmax_SD_3Seeds": 0.0066,
+      "Bootstrap_CI_95_Low": 0.7131,
+      "Bootstrap_CI_95_High": 0.7353,
+      "Optimal_Threshold_Tau": 0.58,
+      "Precision_at_Fmax": 0.7445,
+      "Recall_at_Fmax": 0.6882
+    },
+    {
+      "Model": "DIAMOND homology",
+      "Fmax_Reported": 0.71,
+      "Fmax_Mean_3Seeds": 0.7112,
+      "Fmax_SD_3Seeds": 0.0061,
+      "Bootstrap_CI_95_Low": 0.7084,
+      "Bootstrap_CI_95_High": 0.7308,
+      "Optimal_Threshold_Tau": 0.59,
+      "Precision_at_Fmax": 0.7507,
+      "Recall_at_Fmax": 0.6759
+    },
+    {
+      "Model": "ESM-2 alone",
+      "Fmax_Reported": 0.7,
+      "Fmax_Mean_3Seeds": 0.7009,
+      "Fmax_SD_3Seeds": 0.0061,
+      "Bootstrap_CI_95_Low": 0.6833,
+      "Bootstrap_CI_95_High": 0.7075,
+      "Optimal_Threshold_Tau": 0.59,
+      "Precision_at_Fmax": 0.7379,
+      "Recall_at_Fmax": 0.6676
+    },
+    {
+      "Model": "Shuffled-graph control",
+      "Fmax_Reported": 0.7,
+      "Fmax_Mean_3Seeds": 0.6992,
+      "Fmax_SD_3Seeds": 0.0068,
+      "Bootstrap_CI_95_Low": 0.6802,
+      "Bootstrap_CI_95_High": 0.7054,
+      "Optimal_Threshold_Tau": 0.59,
+      "Precision_at_Fmax": 0.7328,
+      "Recall_at_Fmax": 0.6687
+    },
+    {
+      "Model": "Sequence-window control",
+      "Fmax_Reported": 0.7,
+      "Fmax_Mean_3Seeds": 0.7,
+      "Fmax_SD_3Seeds": 0.0064,
+      "Bootstrap_CI_95_Low": 0.682,
+      "Bootstrap_CI_95_High": 0.7055,
+      "Optimal_Threshold_Tau": 0.59,
+      "Precision_at_Fmax": 0.7431,
+      "Recall_at_Fmax": 0.662
+    }
+  ],
+  "locality_breakdown": [
+    {
+      "Subset": "Non-local active sites",
+      "n_Proteins": 273,
+      "Fmax_ESM2_Alone": 0.6351,
+      "Fmax_ESM2_Structure": 0.7176,
+      "Fmax_Gain_Delta": 0.0824,
+      "Fmax_Gain_Reported": 0.08,
+      "Delta_95_CI_Low": 0.042,
+      "Delta_95_CI_High": 0.1157,
+      "One_Sided_p_value": 0.0
+    },
+    {
+      "Subset": "Local active sites",
+      "n_Proteins": 967,
+      "Fmax_ESM2_Alone": 0.7127,
+      "Fmax_ESM2_Structure": 0.7241,
+      "Fmax_Gain_Delta": 0.0114,
+      "Fmax_Gain_Reported": 0.01,
+      "Delta_95_CI_Low": -0.0078,
+      "Delta_95_CI_High": 0.0305,
+      "One_Sided_p_value": 0.1233
+    },
+    {
+      "Subset": "All test enzymes",
+      "n_Proteins": 1240,
+      "Fmax_ESM2_Alone": 0.6954,
+      "Fmax_ESM2_Structure": 0.7226,
+      "Fmax_Gain_Delta": 0.0272,
+      "Fmax_Gain_Reported": 0.03,
+      "Delta_95_CI_Low": 0.0095,
+      "Delta_95_CI_High": 0.0458,
+      "One_Sided_p_value": 0.0
+    }
+  ],
+  "length_matching_control": {
+    "matched_pairs_per_draw": 273.0,
+    "non_local_length_matched_gain_mean": 0.08243173360824585,
+    "non_local_length_matched_gain_std": 0.022295600637633462,
+    "local_length_matched_gain_mean": 0.014175649285316467,
+    "local_length_matched_gain_std": 0.016083239566093803,
+    "net_locality_advantage_after_length_matching": 0.06825608432292939
+  },
+  "threshold_sweep": [
+    {
+      "seq_sep_threshold_k": 10,
+      "n_non_local": 797,
+      "n_local": 443,
+      "fmax_non_local_seq": 0.6896496415138245,
+      "fmax_non_local_struct": 0.7272763252258301,
+      "fmax_gain_non_local": 0.037626683712005615,
+      "fmax_local_seq": 0.7075644135475159,
+      "fmax_local_struct": 0.7139270901679993,
+      "fmax_gain_local": 0.0063626766204833984
+    },
+    {
+      "seq_sep_threshold_k": 15,
+      "n_non_local": 551,
+      "n_local": 689,
+      "fmax_non_local_seq": 0.6800130605697632,
+      "fmax_non_local_struct": 0.732496440410614,
+      "fmax_gain_non_local": 0.05248337984085083,
+      "fmax_local_seq": 0.708974301815033,
+      "fmax_local_struct": 0.7146517038345337,
+      "fmax_gain_local": 0.005677402019500732
+    },
+    {
+      "seq_sep_threshold_k": 20,
+      "n_non_local": 273,
+      "n_local": 967,
+      "fmax_non_local_seq": 0.6351423859596252,
+      "fmax_non_local_struct": 0.7175741195678711,
+      "fmax_gain_non_local": 0.08243173360824585,
+      "fmax_local_seq": 0.7126680016517639,
+      "fmax_local_struct": 0.7241150140762329,
+      "fmax_gain_local": 0.011447012424468994
+    },
+    {
+      "seq_sep_threshold_k": 30,
+      "n_non_local": 246,
+      "n_local": 994,
+      "fmax_non_local_seq": 0.6306653022766113,
+      "fmax_non_local_struct": 0.7089439630508423,
+      "fmax_gain_non_local": 0.07827866077423096,
+      "fmax_local_seq": 0.711925745010376,
+      "fmax_local_struct": 0.726260781288147,
+      "fmax_gain_local": 0.014335036277770996
+    },
+    {
+      "seq_sep_threshold_k": 50,
+      "n_non_local": 212,
+      "n_local": 1028,
+      "fmax_non_local_seq": 0.6314128637313843,
+      "fmax_non_local_struct": 0.7043019533157349,
+      "fmax_gain_non_local": 0.07288908958435059,
+      "fmax_local_seq": 0.7085636854171753,
+      "fmax_local_struct": 0.7269169688224792,
+      "fmax_gain_local": 0.018353283405303955
+    }
+  ]
+}

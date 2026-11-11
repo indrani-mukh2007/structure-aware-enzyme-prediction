@@ -1,0 +1,6 @@
+Model,Fmax_Reported,Fmax_Mean_3Seeds,Fmax_SD_3Seeds,Bootstrap_CI_95_Low,Bootstrap_CI_95_High,Optimal_Threshold_Tau,Precision_at_Fmax,Recall_at_Fmax
+ESM-2 + structure (GNN),0.72,0.7151,0.0066,0.7131,0.7353,0.58,0.7445,0.6882
+DIAMOND homology,0.71,0.7112,0.0061,0.7084,0.7308,0.59,0.7507,0.6759
+ESM-2 alone,0.7,0.7009,0.0061,0.6833,0.7075,0.59,0.7379,0.6676
+Shuffled-graph control,0.7,0.6992,0.0068,0.6802,0.7054,0.59,0.7328,0.6687
+Sequence-window control,0.7,0.7,0.0064,0.682,0.7055,0.59,0.7431,0.662
